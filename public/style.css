@@ -1,0 +1,49 @@
+
+.home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home .food-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.home .food-products .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.home .food-products .product-card img {
+    width: 300px;
+    height: 300px;
+}
+
+.home .food-products .product-card span {
+    font-size: 25px;
+    font-family: 600;
+}
+
+.home .food-products .product-card h6 {
+    margin: 0;
+    font-size: 30px;
+    font-family: 600;
+}
+
+.home .food-products .product-card p {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 400;
+}

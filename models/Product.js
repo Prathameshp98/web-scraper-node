@@ -1,6 +1,17 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const nutritionSchema = new Schema({
+    protein: {
+        type: String,
+        required: true
+    },
+    kcal: {
+        type: String,
+        required: true
+    }
+})
+
 const ProductSchema = new Schema({
     name: {
         type: String,
@@ -11,25 +22,25 @@ const ProductSchema = new Schema({
         required: true
     },
     price: {
-        type: Number,
-        required: true
-    },
-    nutrition: {
         type: String,
         required: true
     },
-    description: {
-        type: String,
-        required: true
-    },
+    // nutrition: {
+    //     type: nutritionSchema,
+    //     required: true
+    // },
+    // description: {
+    //     type: String,
+    //     required: true
+    // },
     images: {
         type: Array,
         required: true
     },
-    type: {
-        type: String,
-        required: true
-    }
+    // type: {
+    //     type: String,
+    //     required: true
+    // }
 },
 {timestamps: true}
 );

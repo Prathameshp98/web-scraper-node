@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML 5 Boilerplate</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="home">
+            <h1>Food Products</h1>
+            <% if(products.length > 0){ %>
+                <div class="food-products">
+                    <% products.map((product, index) => { %>
+                        <div class="product-card">
+                            <img src="<%= product.images[0] %>" alt="<%= product._id %>" />
+                            <h6><span></span> <%= product.name %></h6>
+                            <p><span>Price: </span> <%= product.price %></p>
+                            <p><span>Quantity: </span> <%= product.quantity %></p>
+                        </div>
+                    <% }) %>
+                </div>
+            <% } else { %>
+                <p>No Products Found :(</p>
+                <p>Refresh the page for viewing the products</p>
+            <% } %>
+        </div>
+	    <script src="index.js"></script>
+    </body>
+</html>
