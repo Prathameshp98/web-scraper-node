@@ -37,6 +37,7 @@
 }
 
 .home .food-products .product-card h6 {
+    text-align: center;
     margin: 0;
     font-size: 30px;
     font-family: 600;
@@ -46,4 +47,19 @@
     font-size: 22px;
     margin: 0;
     font-weight: 400;
+}
+
+@media (max-width: 500px){
+
+    .home .food-products .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 500px;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
 }
