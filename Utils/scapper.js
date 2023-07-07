@@ -21,6 +21,9 @@ const scraperUtil = async($) => {
             .each(async(index, element) => {
                 const pageUrl = $(element).attr("href")
 
+                const type = $($('.vegnonveg--icon')).attr("src")
+                const rating = $($('.flexing-rating-child')[index]).text()
+
                 const response = await getData("https://www.healthkart.com" + pageUrl)
                 $ = cheerio.load(response.data);
 
@@ -32,24 +35,13 @@ const scraperUtil = async($) => {
                 const imgs = $('.slick-track').children().find('.play-btn').attr("src")
                 images.push(imgs)
 
-                // const nutrition = $('.ProductBenefitSections_product-conbinstion-holder-section__VQ_hA')
-                //                     .children()
-                //                     .find('.ProductBenefitSections_product-table-column__1m2Xp')
-                //                     .each(element => {
-                //                         console.log($(element))
-                //                     })
-
-                // const type = $(".doubleSlickCarousel2_veg-nonveg__2UnVw")[0] //.attr("src")
-
-                // $('.slick-track').children().each(element => {
-                //     console.log(element.find('.play-btn'))
-                // })
-
                 const scrapedData = {
                     name: name,
                     quantity: quantity,
                     price: price,
-                    images: images
+                    images: images,
+                    type: type,
+                    rating: rating
                 }
 
                 const product = new Product(scrapedData);

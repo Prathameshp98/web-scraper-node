@@ -14,10 +14,12 @@
                 <div class="food-products">
                     <% products.map((product, index) => { %>
                         <div class="product-card">
+                            <img class="type" src="<%= product.type %>" alt="<%= product._id %>" />
                             <img src="<%= product.images[0] %>" alt="<%= product._id %>" />
-                            <h6><span></span> <%= product.name %></h6>
+                            <h6><%= product.name %></h6>
                             <p><span>Price: </span> <%= product.price %></p>
                             <p><span>Quantity: </span> <%= product.quantity %></p>
+                            <p><span>Rating: </span> <%= product.rating %>/5</p>
                         </div>
                     <% }) %>
                 </div>

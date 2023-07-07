@@ -31,6 +31,12 @@
     height: 300px;
 }
 
+.home .food-products .product-card .type {
+    width: 30px;
+    position: relative;
+    left: -220px;
+}
+
 .home .food-products .product-card span {
     font-size: 25px;
     font-family: 600;
